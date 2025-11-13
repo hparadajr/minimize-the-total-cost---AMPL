@@ -23,13 +23,6 @@ Inventory and costs:
 
 Objective: Minimize total cost of production and inventory holding while meeting all demands on time.
 
-Files
------
-- `github1a.txt` — AMPL model
-- `github1adata.txt` — AMPL data file
-- `results.txt` — Solver run and displayed solution (terminal output)
-- `README.md` — this file
-
 How to run (AMPL)
 -----------------
 1. Start AMPL and select a solver (e.g., Gurobi(which is what I used)):
