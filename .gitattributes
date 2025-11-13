@@ -1,0 +1,12 @@
+# Tell GitHub Linguist to treat AMPL-like extensions as AMPL
+*.ampl linguist-language=AMPL
+*.mod  linguist-language=AMPL
+*.dat  linguist-language=AMPL
+*.run  linguist-language=AMPL
+
+# Explicitly mark the specific files you currently have
+datafile.txt        linguist-language=AMPL
+modelfile.txt    linguist-language=AMPL
+
+# Optional: mark docs directory as documentation
+docs/*              linguist-documentation
