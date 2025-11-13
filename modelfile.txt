@@ -1,0 +1,21 @@
+param Q; #Num of quarters
+param S; # spoil percent
+param U; #unsuitable percent
+param W; # num worker types
+param Initinv; #starting inventory
+param InvCost; #inventory cost per unit
+param d{1..Q};#demand in Q1
+param c{1..W};#cost per worker type j
+param b{1..W};#capacity for worker type j
+
+var x {1..Q,1..W}>=0; #units produced by worker j in quarter i
+var I {i in 0..Q}>=0; #inventory at end quarter i
+
+minimize TotalCost:
+	sum{i in 1..Q,j in 1..W} c[j]*x[i,j] + sum{i in 1..Q} InvCost*I[i];
+subject to InitialInventory:
+	I[0] = Initinv;
+subject to InventoryBalance {i in 1..Q}:
+	I[i]=(1-S)*(I[i-1]+(1-U)*sum{j in 1..W}x[i,j]-d[i]);
+subject to Capacity {i in 1..Q, j in 1..W}:
+	x[i,j] <= b[j];
