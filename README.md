@@ -73,4 +73,4 @@ Interpretation
 - The solver chooses production close to capacity for many quarters (see `x`).
 - End-of-quarter inventories (`I`) show the carryover that helps meet future demand after accounting for spoilage and unsuitable units.
 - Objective value is the sum of production costs (c[j] * x[i,j]) plus inventory holding costs.
-- The overall optimal production strategy has a cost of 11,436.70782$
+- The overall optimal production strategy has a cost of 11,436.7$
